@@ -1,0 +1,14 @@
+# Test coverage reports
+coverage/
+.nyc_output/
+
+# Test logs
+logs/
+test-results/
+
+# Jest cache
+.jest/
+
+# Temporary test files
+*.tmp
+temp/

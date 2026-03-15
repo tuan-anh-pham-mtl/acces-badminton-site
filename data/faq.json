@@ -25,7 +25,7 @@
   },
   {
     "question": "Comment s'inscrire aux activités ou devenir membre ?",
-    "answer": "Remplissez le <a href=\"#\" class=\"faq-form-link\" style=\"color: var(--accent-dark); font-weight: 600;\" target=\"_blank\" rel=\"noopener noreferrer\">formulaire d'inscription en ligne</a>. La cotisation annuelle est de 20$ pour la session <span data-site-session></span>. Le paiement de la cotisation se fait lors de l'inscription."
+    "answer": "Remplissez le <strong><a href=\"#\" class=\"faq-form-link\" style=\"color: var(--accent-dark); font-weight: 600;\" target=\"_blank\" rel=\"noopener noreferrer\">formulaire d'inscription en ligne</a></strong>. La cotisation annuelle est de 20$ pour la session <span data-site-session></span>. Le paiement de la cotisation se fait lors de l'inscription."
   },
   {
     "question": "Y a-t-il possibilité de faire le paiement en plusieurs versements ?",

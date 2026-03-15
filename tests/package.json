@@ -1,0 +1,63 @@
+{
+  "name": "acces-badminton-site",
+  "version": "1.0.0",
+  "description": "Accès Badminton website - OBNL developing badminton in Greater Montreal",
+  "main": "../index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:faq": "jest --testNamePattern=\"FAQ\"",
+    "test:utils": "jest --testNamePattern=\"Utility\"",
+    "test:header": "jest --testNamePattern=\"Header\"",
+    "test:animations": "jest --testNamePattern=\"Animations\"",
+    "test:includes": "jest --testNamePattern=\"Includes\"",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:unit": "jest --testPathPattern=unit",
+    "serve": "cd .. && npx serve -s . -p 8000",
+    "serve:faq": "cd .. && npx serve -s . -p 8000 --open",
+    "dev": "concurrently \"npm run serve\" \"npm run test:watch\""
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/helpers/setup.js"
+    ],
+    "testMatch": [
+      "<rootDir>/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "../assets/js/**/*.js",
+      "!../assets/js/vendor/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "moduleNameMapping": {
+      "^@/(.*)$": "<rootDir>/../$1"
+    }
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "serve": "^14.2.1"
+  },
+  "keywords": [
+    "badminton",
+    "montreal",
+    "obnl",
+    "sports",
+    "association"
+  ],
+  "author": "Accès Badminton",
+  "license": "MIT",
+  "dependencies": {
+    "dompurify": "^3.3.3"
+  }
+}

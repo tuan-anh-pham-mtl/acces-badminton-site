@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .faq-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            padding: 15px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 15px 15px;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+        svg {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ Test</h1>
+    
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Question 1
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    Answer 1 - This is a test answer to see if the FAQ functionality works properly.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Question 2
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    Answer 2 - Another test answer to verify the accordion behavior.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple FAQ functionality test
+        document.addEventListener('click', function(e) {
+            const question = e.target.closest('.faq-question');
+            if (!question) return;
+            
+            e.preventDefault();
+            const item = question.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                const questionBtn = i.querySelector('.faq-question');
+                const answerEl = i.querySelector('.faq-answer');
+                if (questionBtn) questionBtn.setAttribute('aria-expanded', 'false');
+                if (answerEl) answerEl.style.maxHeight = null;
+            });
+
+            // Open clicked item if it was closed
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+                if (answer) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

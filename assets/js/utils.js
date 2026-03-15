@@ -11,19 +11,21 @@
     return div.innerHTML;
   }
 
-  // Safe HTML rendering with allowed tags
-  function safeHTML(str, allowedTags = ['strong', 'br', 'em']) {
+  // Safe HTML rendering using DOMPurify
+  function safeHTML(str, allowedTags = ['strong', 'br', 'a', 'span']) {
     if (!str) return '';
     
-    // Basic sanitization - remove script tags and dangerous attributes
-    const cleanStr = str
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/on\w+="[^"]*"/gi, '')
-      .replace(/javascript:/gi, '');
+    // DOMPurify configuration
+    const config = {
+      ALLOWED_TAGS: allowedTags,
+      ALLOWED_ATTR: ['href', 'target', 'rel', 'data-site-session'],
+      ALLOW_DATA_ATTR: true,
+      RETURN_DOM: false,
+      RETURN_DOM_FRAGMENT: false,
+      RETURN_DOM_IMPORT: false
+    };
     
-    // Only allow specific tags
-    const tagRegex = new RegExp(`<(?!\/?(?:${allowedTags.join('|')})\b)[^>]*>`, 'gi');
-    return cleanStr.replace(tagRegex, '');
+    return DOMPurify.sanitize(str, config);
   }
 
   // Error handling utility

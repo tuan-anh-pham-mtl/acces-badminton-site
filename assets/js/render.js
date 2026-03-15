@@ -256,7 +256,17 @@ function replaceMembershipLinks(site) {
 // Render FAQ items from data
 function renderFAQ(faqData) {
   const container = document.getElementById('faqList');
-  if (!container || !Array.isArray(faqData)) return;
+  if (!container) {
+    console.warn('FAQ container not found');
+    return;
+  }
+  
+  if (!Array.isArray(faqData)) {
+    console.warn('FAQ data is not an array:', faqData);
+    return;
+  }
+  
+  console.log('Rendering FAQ with', faqData.length, 'items');
   
   AccesUtils.setLoading(container, true);
   
@@ -274,6 +284,8 @@ function renderFAQ(faqData) {
         </div>
       </div>
     `).join('');
+    
+    console.log('FAQ rendered successfully');
   } catch (error) {
     AccesUtils.handleError(error, 'Rendering FAQ');
   } finally {

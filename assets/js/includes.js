@@ -6,8 +6,8 @@
   // Load each include
   for (const el of includes) {
     try {
-      const path = el.dataset.include;
-      const res = await fetch(path);
+      const includePath = el.dataset.include;
+      const res = await fetch(includePath);
       if (!res.ok) continue;
       const html = await res.text();
       el.innerHTML = html;

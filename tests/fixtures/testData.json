@@ -1,0 +1,23 @@
+{
+  "faqData": [
+    {
+      "question": "Test Question 1",
+      "answer": "Test Answer 1 with <strong>bold</strong> text"
+    },
+    {
+      "question": "Test Question 2",
+      "answer": "Test Answer 2 with <a href='#'>link</a>"
+    },
+    {
+      "question": "Test Question 3",
+      "answer": "Test Answer 3 with <span data-site-session></span> placeholder"
+    }
+  ],
+  "siteConfig": {
+    "siteName": "Test Badminton Club",
+    "session": "Hiver 2024",
+    "forms": {
+      "registration": "https://forms.example.com/registration"
+    }
+  }
+}
