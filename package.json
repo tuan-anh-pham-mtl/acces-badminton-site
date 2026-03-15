@@ -1,0 +1,36 @@
+{
+  "name": "acces-badminton-site",
+  "version": "1.1.0",
+  "description": "Accès Badminton website - OBNL developing badminton in Greater Montreal",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -p 8000",
+    "dev": "npx serve -s . -p 8000 --watch",
+    "test": "cd tests && npm test",
+    "test:watch": "cd tests && npm run test:watch",
+    "test:coverage": "cd tests && npm run test:coverage",
+    "test:ci": "cd tests && npm run test:ci",
+    "lint": "echo 'No linter configured'",
+    "build": "echo 'No build step needed - static site'",
+    "deploy": "echo 'Deploy to production server'"
+  },
+  "keywords": [
+    "badminton",
+    "montreal", 
+    "obnl",
+    "sports",
+    "association",
+    "website",
+    "static-site"
+  ],
+  "author": "Accès Badminton",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/acces-badminton-site.git"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "concurrently": "^8.2.2"
+  }
+}
