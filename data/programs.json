@@ -1,0 +1,92 @@
+[
+  {
+    "badge": "Junior",
+    "badgeClass": "juniors",
+    "price": "330$",
+    "currency": "CA",
+    "title": "Entraînement Junior : Tous Niveaux — Dimanche H2026",
+    "details": [
+      { "type": "date", "text": "11 janv. — 17 mai 2026 (18 sem.)" },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (54h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "24 athlètes max (17 ans et moins)" }
+    ],
+    "tag": "Session en cours",
+    "tagClass": "current"
+  },
+  {
+    "badge": "Adulte",
+    "badgeClass": "adults",
+    "price": "430$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Tous Niveaux — Dimanche H2026",
+    "details": [
+      { "type": "date", "text": "11 janv. — 17 mai 2026 (18 sem.)" },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (54h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "24 athlètes max" }
+    ],
+    "tag": "Session en cours",
+    "tagClass": "current"
+  },
+  {
+    "badge": "Adulte Avancé",
+    "badgeClass": "advanced",
+    "price": "350$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Avancés/Compétitifs — Jeudi H2026",
+    "details": [
+      { "type": "date", "text": "15 janv. — 16 avril 2026 (14 sem.)" },
+      { "type": "time", "text": "Jeudi 19h45 – 22h30 (38.5h)" },
+      { "type": "location", "text": "Centre de loisirs St-Denis" },
+      { "type": "capacity", "text": "16 athlètes max (tryout requis)" }
+    ],
+    "tag": "Session en cours",
+    "tagClass": "current"
+  },
+  {
+    "badge": "Junior",
+    "badgeClass": "juniors",
+    "price": "240$",
+    "currency": "CA",
+    "title": "Entraînement Junior : Tous Niveaux — Dimanche A2025",
+    "details": [
+      { "type": "date", "text": "7 sept. — 30 nov. 2025 (13 sem.)" },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (39h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "12 athlètes max (17 ans et moins)" }
+    ],
+    "tag": "Session terminée",
+    "tagClass": "past"
+  },
+  {
+    "badge": "Adulte",
+    "badgeClass": "adults",
+    "price": "310$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Tous Niveaux — Dimanche A2025",
+    "details": [
+      { "type": "date", "text": "7 sept. — 30 nov. 2025 (13 sem.)" },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (39h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "24 athlètes max" }
+    ],
+    "tag": "Session terminée",
+    "tagClass": "past"
+  },
+  {
+    "badge": "Adulte Avancé",
+    "badgeClass": "advanced",
+    "price": "350$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Avancés/Compétitifs — Jeudi A2025",
+    "details": [
+      { "type": "date", "text": "11 sept. — 11 déc. 2025 (14 sem.)" },
+      { "type": "time", "text": "Jeudi 19h45 – 22h30 (38.5h)" },
+      { "type": "location", "text": "Centre de loisirs St-Denis" },
+      { "type": "capacity", "text": "16 athlètes max (tryout requis)" }
+    ],
+    "tag": "Session terminée",
+    "tagClass": "past"
+  }
+]

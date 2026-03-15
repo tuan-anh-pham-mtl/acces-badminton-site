@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Centre de loisirs St-Denis",
+    "address": "5115 Rivard St, Montréal, QC",
+    "note": "Jeudi soir — Avancés / Compétitifs",
+    "transit": "1 min du métro Laurier",
+    "instruction": "En métro: Rendez-vous à la station Laurier sortie B, le bâtiment à la droite de la sortie est le centre. Le gymnase est situé au 1er étage.",
+    "icon": "🏟️"
+  },
+  {
+    "name": "Collège de Maisonneuve",
+    "address": "3800 Sherbrooke St E, Montréal, QC",
+    "note": "Dimanche matin — Tous niveaux (Adultes et Juniors)",
+    "transit": "5 min du métro Pie-IX",
+    "instruction": "En métro: Rendez-vous à la station Joliette sortie Nord, marchez vers l'est jusqu'à la rue Nicolet et et ensuite montez la rue. L'entrée 4 est proche du gymnase. Le gymnase est situé au 3e étage.",
+    "icon": "🏟️"
+  }
+]

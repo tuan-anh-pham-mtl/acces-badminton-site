@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://forms.gle;">
+  <title>Accès Badminton — Développer le badminton dans le Grand Montréal</title>
+  <meta name="description" content="Accès Badminton est un organisme à but non lucratif (OBNL) ayant pour mission de développer et de promouvoir le badminton dans le Grand Montréal.">
+  <meta property="og:title" content="Accès Badminton">
+  <meta property="og:description" content="Accès Badminton est un organisme à but non lucratif (OBNL) ayant pour mission de développer et de promouvoir le badminton dans le Grand Montréal.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div data-include="assets/includes/header.html" id="site-header"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero section" id="accueil">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Organisme à but non lucratif
+        </div>
+        <h1 class="hero-title">
+          Développer et promouvoir le <span>badminton</span> dans le Grand Montréal
+        </h1>
+        <p class="hero-desc">
+          Rejoignez notre communauté dynamique de passionnés de badminton. Entraînements supervisés, ligues amicales, tournois et bien plus vous attendent&nbsp;!
+        </p>
+        <div class="hero-actions">
+          <a href="#programmation" class="btn btn-primary">
+            Voir la programmation
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#membre" class="btn btn-secondary">
+            Devenir membre
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">6+</div>
+            <div class="hero-stat-label">Programmes</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">54h</div>
+            <div class="hero-stat-label">Par session</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">2</div>
+            <div class="hero-stat-label">Lieux</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+          <div class="hero-visual-card">
+          <div class="hero-visual-shuttle">&#127992;</div>
+          <div class="hero-visual-info">
+            <h4 id="nextSessionLabel">Prochaine session —</h4>
+            <p id="nextSessionDates"></p>
+          </div>
+          <div class="hero-float-badge top-right">
+            &#127941; Tous niveaux
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / MISSION ===== -->
+  <section class="about section" id="mission">
+    <div class="container about-grid">
+      <div>
+        <span class="section-label">Notre mission</span>
+        <h2 class="section-title">Accès Badminton</h2>
+        <p class="section-subtitle">
+          Nous sommes un organisme à but non lucratif (OBNL) ayant pour mission de développer et de promouvoir le badminton dans le Grand Montréal. Nous offrons plusieurs activités à tous telles que des entraînements supervisés, des ligues amicales, des tournois et bien plus encore prochainement&nbsp;!
+        </p>
+        <p class="text-secondary">
+          Vous pouvez nous rejoindre au club de badminton ONIBAD où il est possible de rencontrer d'autres joueurs qui partagent votre passion. Nous valorisons la progression saine et commune de l'équipe tout en gardant l'aspect compétitif du sport.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">&#127992;</div>
+            <h4>Entraînements</h4>
+            <p>Sessions supervisées pour adultes et juniors, tous niveaux</p>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">&#127942;</div>
+            <h4>Compétitions</h4>
+            <p>Ligues amicales et tournois pour progresser ensemble</p>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">&#129309;</div>
+            <h4>Communauté</h4>
+            <p>Rejoignez des passionnés qui partagent votre amour du sport</p>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">&#128200;</div>
+            <h4>Progression</h4>
+            <p>Valorisation de la progression saine tout en gardant le compétitif</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrapper">
+        <div class="about-image-main">
+          <div class="placeholder-text">
+            <div class="emoji">&#127992;</div>
+            <h3>Club ONIBAD</h3>
+            <p>Grand Montréal, QC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERSHIP ===== -->
+  <section class="membership section" id="membre">
+    <div class="container membership-inner">
+      <div>
+        <span class="section-label">Adhésion</span>
+        <h2 class="section-title">Devenez membre d'Accès Badminton</h2>
+        <p class="section-subtitle">
+          Cotisation annuelle pour les membres, renouvelable à chaque début de session d'automne (Août). Devenir membre permet de s'inscrire aux activités, de recevoir les avis de convocation aux assemblées des membres, d'assister à ces assemblées, d'être élus au conseil d'administration et d'y voter.
+        </p>
+        <p class="text-muted">
+          Il n'est pas obligatoire d'être membre pour participer aux activités.
+        </p>
+      </div>
+      <div class="membership-card">
+        <div class="membership-price">
+          <span class="membership-price-amount" id="membershipPrice">&nbsp;</span>
+          <span class="membership-price-period" id="membershipPeriod">&nbsp;</span>
+        </div>
+        <ul class="membership-benefits">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Inscription prioritaire aux activités
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Avis de convocation aux assemblées des membres
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Droit de vote au conseil d'administration
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Éligibilité au conseil d'administration
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Avoir 18 ans et plus
+          </li>
+        </ul>
+        <a href="https://forms.gle/T1GHt7anheu1ND7H6" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Formulaire d'inscription
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section class="programs section" id="programmation">
+    <div class="container">
+      <div class="programs-header">
+        <span class="section-label">Programmation</span>
+        <h2 class="section-title">Programmation <span id="siteSession"></span></h2>
+        <p class="section-subtitle">
+          Entraînements pour adultes et juniors, tous niveaux et avancés/compétitifs. Les volants d'entraînement (neufs et usagés) sont inclus dans le prix.
+        </p>
+        <div class="programs-notice" id="programsNotice"></div>
+      </div>
+
+      <div id="programsGrid" class="programs-grid">
+        <!-- program cards rendered from data/programs.json -->
+      </div>
+
+      <div style="text-align:center; margin-top: 2.5rem;">
+        <a href="https://forms.gle/T1GHt7anheu1ND7H6" target="_blank" rel="noopener noreferrer" class="btn btn-rose">
+          Formulaire d'inscription aux activités
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATIONS ===== -->
+  <section class="locations section" id="lieux">
+    <div class="container">
+      <span class="section-label">Nos lieux</span>
+      <h2 class="section-title">Lieux d'entraînement</h2>
+      <p class="section-subtitle">Deux emplacements centraux et accessibles en transport en commun dans le Grand Montréal.</p>
+
+      <div id="locationsGrid" class="locations-grid">
+        <!-- locations rendered from data/locations.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <span class="section-label">Questions fréquentes</span>
+        <h2 class="section-title">Tout ce que vous devez savoir</h2>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <!-- FAQ items rendered from data/faq.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <div data-include="assets/includes/footer.html"></div>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/includes.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+</body>
+</html>

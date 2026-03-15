@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Quand ont lieu les entraînements pour adultes ?",
+    "answer": "Les entraînements pour adultes tous niveaux ont lieu le <strong>dimanche matin de 10h30 à 13h30</strong> au Collège de Maisonneuve.<br>Les entraînements avancés/compétitifs ont lieu le <strong>jeudi soir de 19h45 à 22h30</strong> au Centre de loisirs St-Denis."
+  },
+  {
+    "question": "Quand ont lieu les entraînements pour juniors (17 ans et moins) ?",
+    "answer": "Les entraînements pour juniors ont lieu le <strong>dimanche matin de 10h30 à 13h30</strong> au Collège de Maisonneuve."
+  },
+  {
+    "question": "Faut-il être membre pour participer aux activités ?",
+    "answer": "Non, il n'est <strong>pas obligatoire d'être membre</strong> pour participer aux activités. Cependant, les membres cotisants bénéficient d'une priorité sur les inscriptions et du droit de vote au conseil d'administration."
+  },
+  {
+    "question": "Est-ce qu'il est possible de participer à vos activités par séance ?",
+    "answer": "Oui! Il est possible. Nous allons diffuser sur notre page Facebook les disponibilités pour chaque activité. Premier arrivé, premier servi! Suivez notre page Facebook pour plus d'informations."
+  },
+  {
+    "question": "Pour quel niveau s'adresse les entraînements ?",
+    "answer": "Nos entraînements sont pour tous les niveaux, que vous soyez débutant ou un expert, notre entraîneur adaptera le niveau d'intensité de l'exercise pour vous."
+  },
+  {
+    "question": "Les volants sont-ils inclus dans le prix ?",
+    "answer": "Oui, les <strong>volants d'entraînement (neufs et usagés)</strong> sont inclus dans le prix. Le chandail de compétition n'est pas inclus (environ 60$)."
+  },
+  {
+    "question": "Comment s'inscrire aux activités ou devenir membre ?",
+    "answer": "Remplissez le <a href=\"#\" class=\"faq-form-link\" style=\"color: var(--accent-dark); font-weight: 600;\" target=\"_blank\" rel=\"noopener noreferrer\">formulaire d'inscription en ligne</a>. La cotisation annuelle est de 20$ pour la session <span data-site-session></span>. Le paiement de la cotisation se fait lors de l'inscription."
+  },
+  {
+    "question": "Y a-t-il possibilité de faire le paiement en plusieurs versements ?",
+    "answer": "Pour la session <span data-site-session></span>, il n'est pas possible de faire le paiement en plusieurs versements."
+  }
+]

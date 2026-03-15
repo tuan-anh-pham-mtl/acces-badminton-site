@@ -1,0 +1,37 @@
+{
+  "siteName": "Accès Badminton",
+  "currentYear": 2026,
+  "session": "2025-2026",
+  "nextSessionLabel": "Hiver 2026",
+  "nextSessionDates": "Du 11 janvier au 17 mai 2026 • 18 semaines d'entraînement",
+  "programsNotice": "<strong>⚠️ Note :</strong> La programmation pour Hiver 2026 est complète. Les membres cotisants auront une priorité sur les inscriptions.",
+  "email": "info@accesbadminton.ca",
+  "address": {
+    "street": "3355 Rue des Monarques",
+    "city": "Longueuil, QC, J3Y 0G7",
+    "country": "Canada"
+  },
+  "forms": {
+    "membership": "https://forms.gle/T1GHt7anheu1ND7H6",
+    "registration": "https://forms.gle/T1GHt7anheu1ND7H6"
+  },
+  "navigation": [
+    { "label": "Accueil", "anchor": "#accueil" },
+    { "label": "Mission", "anchor": "#mission" },
+    { "label": "Devenir membre", "anchor": "#membre" },
+    { "label": "Programmation", "anchor": "#programmation" },
+    { "label": "Lieux", "anchor": "#lieux" },
+    { "label": "FAQ", "anchor": "#faq" },
+    { "label": "Contact", "anchor": "#contact" }
+  ],
+  "social": [
+    { "name": "facebook", "url": "https://www.facebook.com/ONIBADMTL", "label": "Facebook" },
+    { "name": "instagram", "url": "https://www.instagram.com/onibad_mtl/", "label": "Instagram" }
+  ],
+  "logo": "assets/img/logo_ONI_grey_background.JPG",
+  "documents": [
+    { "title": "Rapport d'activité", "url": "assets/docs/rapports-activites-acces-badminton-2023-2024.pdf" },
+    { "title": "Règlements généraux", "url": "assets/docs/reglements-generaux-acces-badminton-2022.pdf" },
+    { "title": "Politique de confidentialité", "url": "privacy-policy.html" }
+  ]
+}
