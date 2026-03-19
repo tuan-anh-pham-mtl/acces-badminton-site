@@ -20,7 +20,7 @@ Frontend (100% Static)
 ├── assets/
 │   ├── css/styles.css     # Complete styling system
 │   ├── js/                # Modular JavaScript
-│   │   ├── utils.js       # Security & utilities
+│   │   ├── utils.js       # Security & utilities (production only)
 │   │   ├── render.js      # Dynamic content
 │   │   ├── faq.js         # FAQ accordion
 │   │   ├── header.js      # Navigation
@@ -81,15 +81,19 @@ const handleScroll = AccesUtils.throttle(() => {
 ### Test Organization
 ```
 tests/
-├── unit/                    # Component isolation tests
-│   ├── faq.test.js         # FAQ functionality
-│   ├── utils.test.js       # Utility functions
-│   ├── header.test.js      # Navigation system
-│   ├── animations.test.js  # Scroll animations
-│   └── includes.test.js    # Client-side includes
-├── integration/             # Component interaction tests
+├── helpers/                    # Test utilities and setup
+│   ├── test-utils.js          # Test-only utility functions
+│   └── setup.js               # Jest configuration
+├── unit/                      # Component isolation tests
+│   ├── faq.test.js           # FAQ functionality
+│   ├── utils.test.js         # Production utility functions
+│   ├── test-utils.test.js    # Test utility functions
+│   ├── header.test.js        # Navigation system
+│   ├── animations.test.js    # Scroll animations
+│   └── includes.test.js      # Client-side includes
+├── integration/               # Component interaction tests
 │   └── dynamic-content.test.js
-└── fixtures/               # Test data and mocks
+└── fixtures/                  # Test data and mocks
 ```
 
 ### Testing Strategy
@@ -97,6 +101,53 @@ tests/
 - **Integration Tests**: Component interaction testing
 - **Mock Services**: External dependency simulation
 - **Coverage Reports**: Code coverage tracking
+
+### Test Helper Architecture
+- **Separation**: Test utilities isolated from production code
+- **CommonJS**: Jest-compatible module system
+- **Reusable Functions**: formatDate, isInViewport, scrollToElement for testing
+- **Mock Creation**: createMockElement, mockFetch utilities
+- **Clean Production**: Only essential utilities in production bundle
+
+## 📱 Mobile Architecture
+
+### Responsive Design
+- **Mobile-First**: All pages designed for mobile first
+- **Progressive Enhancement**: Enhanced experience for larger screens
+- **Consistent UX**: Same mobile experience across all pages
+
+### Mobile Menu System
+- **Slide-Out Panel**: Replaces full-screen overlay
+- **Backdrop Overlay**: Improves focus and accessibility
+- **Touch Support**: Touch-friendly close interactions
+- **Keyboard Navigation**: Full accessibility support
+
+### Content Layout
+- **Responsive Containers**: `clamp()` functions for fluid padding
+- **Mobile Padding**: Content-body adjustments for small screens
+- **Flexible Typography**: Scalable font sizes
+
+### Page Structure
+All pages follow consistent patterns:
+```html
+<header data-include="assets/includes/header.html"></header>
+<main>
+  <section class="hero section">
+    <div class="container hero-inner">...</div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <article class="content-body">...</article>
+    </div>
+  </section>
+</main>
+<footer data-include="assets/includes/footer.html"></footer>
+```
+
+### Script Loading
+- **Consistent Order**: Same script loading across all pages
+- **No Conflicts**: Prevents duplicate script loading
+- **Progressive Loading**: Essential scripts first, enhancements deferred
 
 ## 🎨 Component Architecture
 

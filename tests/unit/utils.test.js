@@ -1,6 +1,7 @@
-import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
-import fs from 'fs';
-import path from 'path';
+const { describe, it, expect, beforeEach, afterEach, jest } = require('@jest/globals');
+const fs = require('fs');
+const path = require('path');
+const { formatDate, isInViewport, scrollToElement } = require('../helpers/test-utils.js');
 
 // Load the utils script content
 const utilsScriptContent = fs.readFileSync(
@@ -216,7 +217,7 @@ describe('Utility Functions', () => {
     it('should return true when element is in viewport', () => {
       const element = createDOMElement('div');
       
-      expect(window.AccesUtils.isInViewport(element)).toBe(true);
+      expect(isInViewport(element)).toBe(true);
     });
 
     it('should return false when element is outside viewport', () => {
@@ -228,7 +229,7 @@ describe('Utility Functions', () => {
         right: 200
       });
       
-      expect(window.AccesUtils.isInViewport(element)).toBe(false);
+      expect(isInViewport(element)).toBe(false);
     });
   });
 
@@ -253,7 +254,7 @@ describe('Utility Functions', () => {
     it('should scroll to element', () => {
       const element = createDOMElement('div');
       
-      window.AccesUtils.scrollToElement(element);
+      scrollToElement(element);
       
       expect(window.scrollTo).toHaveBeenCalledWith({
         top: 100,
@@ -264,7 +265,7 @@ describe('Utility Functions', () => {
     it('should apply offset', () => {
       const element = createDOMElement('div');
       
-      window.AccesUtils.scrollToElement(element, 50);
+      scrollToElement(element, 50);
       
       expect(window.scrollTo).toHaveBeenCalledWith({
         top: 50,
@@ -274,7 +275,7 @@ describe('Utility Functions', () => {
 
     it('should handle null element', () => {
       expect(() => {
-        window.AccesUtils.scrollToElement(null);
+        scrollToElement(null);
       }).not.toThrow();
       
       expect(window.scrollTo).not.toHaveBeenCalled();
@@ -284,7 +285,7 @@ describe('Utility Functions', () => {
   describe('formatDate', () => {
     it('should format date with default options', () => {
       const date = new Date('2024-03-14');
-      const result = window.AccesUtils.formatDate(date);
+      const result = formatDate(date);
       
       expect(result).toMatch(/2024/);
       expect(result).toMatch(/mars/);
@@ -292,7 +293,7 @@ describe('Utility Functions', () => {
 
     it('should format date with custom options', () => {
       const date = new Date('2024-03-14');
-      const result = window.AccesUtils.formatDate(date, { 
+      const result = formatDate(date, { 
         year: '2-digit',
         month: 'short' 
       });

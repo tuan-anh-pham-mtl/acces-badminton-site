@@ -215,7 +215,9 @@ function renderMobileNav(site) {
   const container = document.getElementById('mobileNav');
   if (!container || !site.navigation) return;
   container.innerHTML = site.navigation.map(link => 
-    `<a href="index.html${link.anchor}" onclick="closeMobile()">${link.label}</a>`
+    `<li class="mobile-nav-item">
+      <a href="index.html${link.anchor}" class="mobile-nav-link" onclick="closeMobile()">${link.label}</a>
+    </li>`
   ).join('');
 }
 
@@ -242,7 +244,7 @@ function renderMobileSocial(site) {
   const container = document.getElementById('mobileSocial');
   if (!container || !site.social) return;
   container.innerHTML = site.social.map(link => 
-    `<a href="${link.url}" target="_blank" rel="noopener noreferrer" aria-label="${link.label}" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--gray-100);border-radius:50%;">${createSocialSVG(link.name)}</a>`
+    `<a href="${link.url}" target="_blank" rel="noopener noreferrer" aria-label="${link.label}" class="mobile-social-link">${createSocialSVG(link.name)}</a>`
   ).join('');
 }
 
@@ -266,8 +268,6 @@ function renderFAQ(faqData) {
     return;
   }
   
-  console.log('Rendering FAQ with', faqData.length, 'items');
-  
   AccesUtils.setLoading(container, true);
   
   try {
@@ -284,8 +284,6 @@ function renderFAQ(faqData) {
         </div>
       </div>
     `).join('');
-    
-    console.log('FAQ rendered successfully');
   } catch (error) {
     AccesUtils.handleError(error, 'Rendering FAQ');
   } finally {

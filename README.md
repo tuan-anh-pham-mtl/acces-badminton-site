@@ -66,7 +66,7 @@ open docs/README.md
 
 ## 📁 Project Structure
 
-```
+````
 acces-badminton-site/
 ├── 📁 Production Files
 │   ├── index.html
@@ -81,11 +81,14 @@ acces-badminton-site/
 │   └── CONTRIBUTING.md   # Contribution guidelines
 └── 📁 tests/             # 🧪 All development tools and tests
     ├── package.json       # Dependencies and scripts
+    ├── helpers/           # Test utilities and setup
+    │   ├── test-utils.js  # Test-only utility functions
+    │   └── setup.js       # Jest configuration
     ├── unit/             # Unit tests
     ├── integration/      # Integration tests
     ├── fixtures/         # Test data
     └── README.md         # Testing documentation
-```
+````
 
 ## 🧪 Testing
 
@@ -110,13 +113,15 @@ npm run test:coverage # Coverage report
 - ✅ **Animations**: Scroll-triggered reveals, intersection observer
 - ✅ **Includes**: Client-side HTML includes, error handling
 - ✅ **Utilities**: HTML sanitization, error handling, helpers
+- ✅ **Test Utilities**: Dedicated test helper functions
 - ✅ **Integration**: Dynamic content loading, site configuration
 
 **Testing Philosophy:**
 - 🎯 **Essential coverage** - Focus on user-facing features
-- 🚫 **No overkill** - Skip implementation details, test behavior
+- 🚫 **No overkill** - Test behavior, not implementation details
 - 🔄 **Prevent regressions** - Catch breaking changes early
 - ⚡ **Fast feedback** - Quick test runs for development
+- 🏗️ **Clean architecture** - Separate test utilities from production
 
 ## 🛠️ Development Workflow
 
@@ -128,12 +133,13 @@ This separation keeps your production directory clean while providing comprehens
 
 ## 🌟 Key Features
 
-- **📱 Mobile-First Design** - Works perfectly on all devices
-- **♿ Accessibility** - WCAG compliant, keyboard navigable
+- **📱 Mobile-First Design** - Works perfectly on all devices with redesigned slide-out menu
+- **♿ Accessibility** - WCAG compliant, keyboard navigable, proper ARIA labels
 - **🔒 Secure** - XSS protection and safe content rendering
 - **⚡ Fast** - Optimized loading and smooth interactions
-- **🧪 Tested** - Comprehensive automated test suite
+- **🧪 Tested** - Comprehensive automated test suite with clean architecture
 - **📚 Documented** - Complete technical and project documentation
+- **📄 Legal Pages** - Mobile-responsive privacy policy with proper content padding
 
 ## 📞 Community & Support
 

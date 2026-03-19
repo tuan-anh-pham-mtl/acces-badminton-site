@@ -110,7 +110,7 @@ npm run test:coverage     # Coverage report
 
 ### Writing Tests
 ```javascript
-import { describe, it, expect, beforeEach } from '@jest/globals';
+const { describe, it, expect, beforeEach } = require('@jest/globals');
 
 describe('Feature Name', () => {
   it('should work as expected', () => {

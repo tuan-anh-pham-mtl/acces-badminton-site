@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
-import fs from 'fs';
-import path from 'path';
+const { describe, it, expect, beforeEach, afterEach, jest } = require('@jest/globals');
+const fs = require('fs');
+const path = require('path');
 
 // Load animations script content
 const animationsScriptContent = fs.readFileSync(

@@ -2,6 +2,36 @@
 
 All notable changes to the Accès Badminton website will be documented in this file.
 
+## [1.2.0] - 2025-03-19
+
+### 🚀 Features
+- **feat**: Mobile menu redesign with slide-out panel and backdrop overlay
+- **feat**: Mobile-responsive privacy policy page with proper content padding
+- **feat**: Dedicated test helpers module architecture
+
+### 🛠️ Fixes  
+- **fix**: Mobile hamburger menu display and interaction issues
+- **fix**: Duplicate header.js loading causing script conflicts
+- **fix**: Jest ES6 import compatibility issues
+
+### 🧹 Chore
+- **chore**: Removed unused utility functions from production bundle
+- **chore**: Separated test utilities from production code
+- **chore**: Standardized script loading order across all pages
+
+### ⚠️ Breaking Changes
+- **BREAKING**: Removed unused utility functions from production:
+  - `formatDate()`, `isInViewport()`, `scrollToElement()` - moved to test helpers
+- **BREAKING**: Test files now use CommonJS require() instead of ES6 imports
+
+### 📋 Migration Notes
+- Mobile menu uses slide-out panel instead of full-screen overlay
+- Privacy policy has same mobile experience as main site
+- Test utilities moved to `tests/helpers/test-utils.js`
+- Bundle size reduced by removing unused production functions
+
+---
+
 ## [1.1.0] - 2025-03-15
 
 ### 🚀 Features
