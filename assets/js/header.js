@@ -4,6 +4,8 @@
     const header = document.getElementById('header');
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
     const scrollTop = document.getElementById('scrollTop');
 
     // Scroll effect - use throttled listener for better performance
@@ -26,16 +28,35 @@
     function closeMobileMenu() {
       if (hamburger) hamburger.classList.remove('active');
       if (mobileMenu) mobileMenu.classList.remove('active');
+      if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('active');
       document.body.style.overflow = '';
+      // Return focus to hamburger button for accessibility
+      if (hamburger) hamburger.focus();
     }
 
     // Mobile menu toggle
     if (hamburger && mobileMenu) {
       hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        const isActive = hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active', isActive);
+        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.toggle('active', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
+        
+        // When opening menu, focus on close button for accessibility
+        if (isActive && mobileMenuClose) {
+          setTimeout(() => mobileMenuClose.focus(), 300);
+        }
       });
+
+      // Close mobile menu on close button click
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close mobile menu on backdrop click
+      if (mobileMenuBackdrop) {
+        mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+      }
 
       // Close mobile menu on ESC key
       document.addEventListener('keydown', (e) => {
@@ -46,7 +67,7 @@
 
       // Close mobile menu when clicking on a link
       mobileMenu.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
+        if (e.target.tagName === 'A' && e.target.classList.contains('mobile-nav-link')) {
           closeMobileMenu();
         }
       });

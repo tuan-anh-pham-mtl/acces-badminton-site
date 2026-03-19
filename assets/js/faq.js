@@ -4,25 +4,20 @@
   
   function initFAQ() {
     if (isInitialized) {
-      console.log('FAQ already initialized, skipping');
       return;
     }
     
     const faqQuestions = document.querySelectorAll('.faq-question');
     
     if (faqQuestions.length === 0) {
-      console.log('No FAQ questions found, will retry...');
       return;
     }
-    
-    console.log('Initializing FAQ with', faqQuestions.length, 'questions');
     
     // Use event delegation to handle clicks
     document.addEventListener('click', function clickHandler(e) {
       const question = e.target.closest('.faq-question');
       if (!question) return;
       
-      console.log('FAQ question clicked');
       e.preventDefault();
       const item = question.closest('.faq-item');
       const answer = item.querySelector('.faq-answer');
@@ -66,12 +61,10 @@
     }
     
     isInitialized = true;
-    console.log('FAQ initialization completed');
   }
 
   // Try multiple initialization strategies
   function tryInit() {
-    console.log('Attempting FAQ initialization...');
     initFAQ();
   }
 
@@ -90,7 +83,6 @@
   const maxAttempts = 10;
   const retryInterval = setInterval(() => {
     attempts++;
-    console.log(`FAQ retry attempt ${attempts}/${maxAttempts}`);
     initFAQ();
     
     if (attempts >= maxAttempts || isInitialized) {

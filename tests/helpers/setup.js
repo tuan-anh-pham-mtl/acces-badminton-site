@@ -1,5 +1,5 @@
 // Jest setup file
-import '@jest/globals';
+require('@jest/globals');
 
 // Mock DOM APIs that Jest doesn't provide
 Object.defineProperty(window, 'scrollTo', {

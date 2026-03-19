@@ -11,10 +11,12 @@ acces-badminton-site/
 ├── data/                  # JSON data files
 └── tests/                 # 🧪 Testing directory (this folder)
     ├── package.json        # Test dependencies and scripts
+    ├── helpers/            # Test utilities and setup
+    │   ├── test-utils.js   # Test-only utility functions
+    │   └── setup.js        # Jest configuration
     ├── unit/              # Unit tests for individual functions
     ├── integration/       # Integration tests for component interactions
     ├── fixtures/          # Test data and mock data
-    ├── helpers/           # Test utilities and setup
     ├── test-faq.html      # Manual FAQ testing
     └── README.md         # This file
 ```
@@ -86,6 +88,13 @@ npm run dev                # Runs server + tests simultaneously
 - ✅ Performance utilities (debounce/throttle)
 - ✅ DOM helpers and error handling
 
+### Test Utilities (`unit/test-utils.test.js`)
+- ✅ Date formatting with French locale
+- ✅ Viewport detection functionality
+- ✅ Smooth scroll utilities
+- ✅ Mock DOM element creation
+- ✅ Mock fetch API responses
+
 ### Dynamic Content (`integration/dynamic-content.test.js`)
 - ✅ FAQ data loading and rendering
 - ✅ Site configuration updates
@@ -128,7 +137,7 @@ After running tests, coverage reports are generated in:
 
 ### Test Template
 ```javascript
-import { describe, it, expect, beforeEach, jest } from '@jest/globals';
+const { describe, it, expect, beforeEach, jest } = require('@jest/globals');
 
 describe('Feature Name', () => {
   beforeEach(() => {
