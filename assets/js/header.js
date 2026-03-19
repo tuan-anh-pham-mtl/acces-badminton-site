@@ -36,7 +36,9 @@
 
     // Mobile menu toggle
     if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', () => {
+      // Handle both click and touch events for iOS compatibility
+      const toggleMenu = (e) => {
+        e.preventDefault();
         const isActive = hamburger.classList.toggle('active');
         mobileMenu.classList.toggle('active', isActive);
         if (mobileMenuBackdrop) mobileMenuBackdrop.classList.toggle('active', isActive);
@@ -46,7 +48,10 @@
         if (isActive && mobileMenuClose) {
           setTimeout(() => mobileMenuClose.focus(), 300);
         }
-      });
+      };
+      
+      hamburger.addEventListener('click', toggleMenu);
+      hamburger.addEventListener('touchstart', toggleMenu, { passive: true });
 
       // Close mobile menu on close button click
       if (mobileMenuClose) {

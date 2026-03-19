@@ -2,6 +2,28 @@
 
 All notable changes to the Accès Badminton website will be documented in this file.
 
+## [1.3.0] - 2025-10-19
+ 
+### 🚀 Features
+- **feat**: Deployment-ready mobile menu with cross-platform compatibility
+- **feat**: Validated mobile functionality across iPhone, Samsung, and Android devices
+ 
+### 🛠️ Fixes  
+- **fix**: Resolved deployment blockers for mobile menu functionality
+- **fix**: Ensured consistent mobile experience across all platforms
+ 
+### 🧹 Chore
+- **chore**: Updated documentation for deployment
+- **chore**: Version bump for production release
+ 
+### 📋 Deployment Notes
+- Mobile menu fixes validated on multiple device types
+- Cross-platform compatibility confirmed
+- Documentation updated to reflect current implementation
+- Ready for production deployment with version 1.2.3
+ 
+---
+
 ## [1.2.0] - 2025-03-19
 
 ### 🚀 Features
