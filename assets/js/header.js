@@ -26,34 +26,50 @@
 
     // Helper function to close mobile menu
     function closeMobileMenu() {
-      if (hamburger) hamburger.classList.remove('active');
-      if (mobileMenu) mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
       if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('active');
-      // Remove aggressive body overflow that was locking the page
-      // document.body.style.overflow = '';
-      // Return focus to hamburger button for accessibility
+      document.body.style.overflow = '';
       if (hamburger) hamburger.focus();
     }
 
     // Mobile menu toggle
     if (hamburger && mobileMenu) {
-      // Handle click events only to prevent iOS conflicts
       const toggleMenu = (e) => {
-        const isActive = hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active', isActive);
-        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.toggle('active', isActive);
+        e.preventDefault();
+        e.stopPropagation();
         
-        // Remove aggressive body overflow that locks the page
-        // document.body.style.overflow = isActive ? 'hidden' : '';
+        const isActive = !hamburger.classList.contains('active');
         
-        // When opening menu, focus on close button for accessibility
+        if (isActive) {
+          hamburger.classList.add('active');
+          mobileMenu.classList.add('active');
+          if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        } else {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        
         if (isActive && mobileMenuClose) {
-          setTimeout(() => mobileMenuClose.focus(), 300);
+          setTimeout(() => mobileMenuClose.focus(), 100);
         }
       };
       
-      // Only use click event for universal compatibility
-      hamburger.addEventListener('click', toggleMenu);
+      // Use both touchstart and click for mobile compatibility
+      hamburger.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu(e);
+      }, { passive: false });
+      
+      hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu(e);
+      });
 
       // Close mobile menu on close button click
       if (mobileMenuClose) {
@@ -82,6 +98,13 @@
 
     // Expose closeMobile to global scope for onclick handlers (backward compatibility)
     window.closeMobile = closeMobileMenu;
+    
+    // Close menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
   }
 
   // Initialize after DOM ready

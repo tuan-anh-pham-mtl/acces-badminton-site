@@ -2,7 +2,7 @@
 
 All notable changes to the Accès Badminton website will be documented in this file.
 
-## [1.3.0] - 2025-10-19
+## [1.3.0] - 2026-03-19
  
 ### 🚀 Features
 - **feat**: Deployment-ready mobile menu with cross-platform compatibility
@@ -20,11 +20,11 @@ All notable changes to the Accès Badminton website will be documented in this f
 - Mobile menu fixes validated on multiple device types
 - Cross-platform compatibility confirmed
 - Documentation updated to reflect current implementation
-- Ready for production deployment with version 1.2.3
+- Ready for production deployment with version 1.3.0
  
 ---
 
-## [1.2.0] - 2025-03-19
+## [1.2.0] - 2026-03-19
 
 ### 🚀 Features
 - **feat**: Mobile menu redesign with slide-out panel and backdrop overlay
@@ -54,7 +54,7 @@ All notable changes to the Accès Badminton website will be documented in this f
 
 ---
 
-## [1.1.0] - 2025-03-15
+## [1.1.0] - 2026-03-15
 
 ### 🚀 Features
 - **feat**: Implement DOMPurify for industry-standard XSS protection
