@@ -333,18 +333,17 @@ async function initDynamic() {
 
     // Store site config globally for other scripts
     window.__siteConfig = site;
+    
+    // Wait for includes to be fully loaded before rendering footer
+    if (!window.__includesReady) {
+      await new Promise(resolve => document.addEventListener('includesLoaded', resolve, { once: true }));
+    }
 
     // Render navigation and social
     renderHeaderNav(site);
     renderMobileNav(site);
     renderHeaderSocial(site);
     renderMobileSocial(site);
-    
-    // Wait for includes to be fully loaded before rendering footer
-    if (!window.__includesReady) {
-      await new Promise(resolve => document.addEventListener('includesLoaded', resolve, { once: true }));
-    }
-    
     renderFooterNav(site);
     renderFooterSocial(site);
     
