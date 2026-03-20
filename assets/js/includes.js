@@ -20,10 +20,12 @@
   if (!window.__acces_includes_loaded) {
     const s = document.createElement('script');
     s.src = 'assets/js/header.js';
-    s.defer = true;
     document.body.appendChild(s);
     window.__acces_includes_loaded = true;
   }
+  
+  // Set flag BEFORE dispatching event to prevent race condition
+  window.__includesReady = true;
   
   // Signal that all includes have loaded
   document.dispatchEvent(new Event('includesLoaded'));

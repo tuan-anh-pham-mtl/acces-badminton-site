@@ -8,14 +8,19 @@
     const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
     const scrollTop = document.getElementById('scrollTop');
 
-    // Scroll effect - use throttled listener for better performance
-    const handleScroll = AccesUtils.throttle(() => {
-      const y = window.scrollY || window.pageYOffset;
-      if (header) header.classList.toggle('scrolled', y > 20);
-      if (scrollTop) scrollTop.classList.toggle('visible', y > 400);
-    }, 16); // ~60fps
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Use requestAnimationFrame for perfectly synced mobile scrolling
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY || window.pageYOffset;
+          if (header) header.classList.toggle('scrolled', y > 20);
+          if (scrollTop) scrollTop.classList.toggle('visible', y > 400);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
 
     // Scroll to top
     if (scrollTop) {
@@ -58,16 +63,10 @@
         }
       };
       
-      // Use both touchstart and click for mobile compatibility
-      hamburger.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleMenu(e);
-      }, { passive: false });
-      
+      // A single click listener is all you need. 
+      // The CSS 'touch-action: manipulation' already ensures it fires instantly on mobile.
       hamburger.addEventListener('click', (e) => {
         e.preventDefault();
-        e.stopPropagation();
         toggleMenu(e);
       });
 
@@ -101,9 +100,18 @@
     
     // Close menu when resizing to desktop
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+      if (window.innerWidth > 900 && mobileMenu.classList.contains('active')) {
         closeMobileMenu();
       }
+    });
+
+    // Close menu on orientation change
+    window.addEventListener('orientationchange', () => {
+      setTimeout(() => {
+        if (window.innerWidth > 900 && mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      }, 150);
     });
   }
 

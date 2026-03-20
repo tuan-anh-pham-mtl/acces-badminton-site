@@ -135,7 +135,6 @@ describe('Client-side Includes', () => {
       // Check if script tag was added
       const headerScript = document.querySelector('script[src="assets/js/header.js"]');
       expect(headerScript).toBeTruthy();
-      expect(headerScript.defer).toBe(true);
       expect(window.__acces_includes_loaded).toBe(true);
     });
 

@@ -3,17 +3,18 @@
   let isInitialized = false;
   
   function initFAQ() {
+    // 1. First, check if we've already set things up. If yes, stop here.
     if (isInitialized) {
       return;
     }
     
+    // 2. Make sure there are actually FAQs on the page before doing work
     const faqQuestions = document.querySelectorAll('.faq-question');
-    
     if (faqQuestions.length === 0) {
       return;
     }
     
-    // Use event delegation to handle clicks
+    // 3. Use event delegation to handle clicks
     document.addEventListener('click', function clickHandler(e) {
       const question = e.target.closest('.faq-question');
       if (!question) return;
@@ -42,7 +43,7 @@
       }
     });
 
-    // Keyboard support: Space and Enter to toggle
+    // 4. Keyboard support: Space and Enter to toggle
     document.addEventListener('keydown', function keydownHandler(e) {
       if (e.key === ' ' || e.key === 'Enter') {
         const question = e.target.closest('.faq-question');
@@ -52,7 +53,7 @@
       }
     });
 
-    // Update form link to use site config
+    // 5. Update form link to use site config
     const formLinks = document.querySelectorAll('.faq-form-link');
     if (window.__siteConfig && window.__siteConfig.forms && formLinks.length) {
       formLinks.forEach(link => {
@@ -60,6 +61,17 @@
       });
     }
     
+    // 6. Recalculate heights on device rotation or resize (SAFELY PLACED HERE)
+    window.addEventListener('resize', window.AccesUtils.debounce(() => {
+      document.querySelectorAll('.faq-item.active .faq-answer').forEach(answer => {
+        // Temporarily remove max-height to get the new natural height
+        answer.style.maxHeight = 'none'; 
+        const newHeight = answer.scrollHeight;
+        answer.style.maxHeight = newHeight + 'px';
+      });
+    }, 200));
+    
+    // 7. Lock the initialization so none of the above runs twice
     isInitialized = true;
   }
 
