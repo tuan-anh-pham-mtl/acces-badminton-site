@@ -1,4 +1,18 @@
-[
+[  {
+    "badge": "Adulte",
+    "badgeClass": "adults",
+    "price": "120$",
+    "currency": "CA",
+    "title": "Ligue Adulte compétitif: Jeudi P2025",
+    "details": [
+      { "type": "date", "text": "23 avril — 11 juin 2026 (8 sem.)" },
+      { "type": "time", "text": "Jeudi 19h45 – 22h30" },
+      { "type": "location", "text": "Centre de loisirs St-Denis" },
+      { "type": "capacity", "text": "24 athlètes max" }
+    ],
+    "tag": "Session en cours",
+    "tagClass": "current"
+  },
   {
     "badge": "Junior",
     "badgeClass": "juniors",
@@ -41,8 +55,8 @@
       { "type": "location", "text": "Centre de loisirs St-Denis" },
       { "type": "capacity", "text": "16 athlètes max (tryout requis)" }
     ],
-    "tag": "Session en cours",
-    "tagClass": "current"
+    "tag": "Session terminée",
+    "tagClass": "past"
   },
   {
     "badge": "Junior",
