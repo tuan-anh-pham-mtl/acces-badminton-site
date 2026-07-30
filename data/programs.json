@@ -10,8 +10,8 @@
       { "type": "location", "text": "Centre de loisirs St-Denis" },
       { "type": "capacity", "text": "24 athlètes max" }
     ],
-    "tag": "Session en cours",
-    "tagClass": "future"
+    "tag": "Session terminée",
+    "tagClass": "current"
   },
   {
     "badge": "Junior",
@@ -25,8 +25,8 @@
       { "type": "location", "text": "Collège de Maisonneuve" },
       { "type": "capacity", "text": "24 athlètes max (17 ans et moins)" }
     ],
-    "tag": "Session en cours",
-    "tagClass": "past"
+    "tag": "Session terminée",
+    "tagClass": "current"
   },
   {
     "badge": "Adulte",
@@ -40,7 +40,7 @@
       { "type": "location", "text": "Collège de Maisonneuve" },
       { "type": "capacity", "text": "24 athlètes max" }
     ],
-    "tag": "Session en cours",
+    "tag": "Session terminée",
     "tagClass": "current"
   },
   {
