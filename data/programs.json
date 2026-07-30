@@ -11,7 +11,7 @@
       { "type": "capacity", "text": "24 athlètes max" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "future"
   },
   {
     "badge": "Junior",
@@ -26,7 +26,7 @@
       { "type": "capacity", "text": "24 athlètes max (17 ans et moins)" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "past"
   },
   {
     "badge": "Adulte",
