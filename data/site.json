@@ -1,10 +1,10 @@
 {
   "siteName": "Accès Badminton",
   "currentYear": 2026,
-  "session": "2025-2026",
-  "nextSessionLabel": "Printemps 2026",
-  "nextSessionDates": "Du 23 avril au 11 juin 2026 • 8 semaines",
-  "programsNotice": "<strong>⚠️ Note :</strong> La programmation pour Hiver 2026 est complète. Les membres cotisants auront une priorité sur les inscriptions.",
+  "session": "2026-2027",
+  "nextSessionLabel": "Automne 2026",
+  "nextSessionDates": "Du 13 septembre au 6 décembre 2026 • 12 semaines",
+  "programsNotice": "<strong>⚠️ Note :</strong> Les membres cotisants auront une priorité sur les inscriptions.",
   "email": "info@accesbadminton.ca",
   "address": {
     "street": "3355 Rue des Monarques",
@@ -12,8 +12,8 @@
     "country": "Canada"
   },
   "forms": {
-    "membership": "https://forms.gle/T1GHt7anheu1ND7H6",
-    "registration": "https://forms.gle/cdnBbj49cowpjcnc6"
+    "membership": "https://forms.gle/aCdBdTuZnjMeABT99",
+    "registration": "xxx"
   },
   "navigation": [
     { "label": "Accueil", "anchor": "#accueil" },
