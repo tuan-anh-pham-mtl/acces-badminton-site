@@ -257,9 +257,18 @@ function renderMobileSocial(site) {
 
 // Replace hardcoded form URLs with dynamic ones from site.json
 function replaceMembershipLinks(site) {
-  document.querySelectorAll('a[href*="forms.gle"]').forEach(link => {
-    link.href = site.forms.registration;
-  });
+  // Find the links directly by their new name tags
+  const membershipLink = document.getElementById('membership-link');
+  const activitiesLink = document.getElementById('activities-link');
+
+  // If the links exist on the page, change where they point
+  if (membershipLink) {
+    membershipLink.href = site.forms.membership;
+  }
+  
+  if (activitiesLink) {
+    activitiesLink.href = site.forms.registration;
+  }
 }
 
 // Render FAQ items from data
