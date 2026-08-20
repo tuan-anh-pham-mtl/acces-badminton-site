@@ -23,7 +23,7 @@
       { "type": "date", "text": "13 sept. — 6 déc. 2026 (12 sem.) Excluant 29 nov." },
       { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
       { "type": "location", "text": "Collège de Maisonneuve" },
-      { "type": "capacity", "text": "24 athlètes max" }
+      { "type": "capacity", "text": "12 athlètes max" }
     ],
     "tag": "Session en cours",
     "tagClass": "current"
@@ -38,7 +38,7 @@
       { "type": "date", "text": "13 sept. — 6 déc. 2026 (12 sem.) Excluant 29 nov." },
       { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
       { "type": "location", "text": "Collège de Maisonneuve" },
-      { "type": "capacity", "text": "24 athlètes max" }
+      { "type": "capacity", "text": "12 athlètes max" }
     ],
     "tag": "Session en cours",
     "tagClass": "current"
