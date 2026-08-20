@@ -5,7 +5,7 @@
     "currency": "CA",
     "title": "Entraînement Adulte : Avancés/Compétitifs — Jeudi A2026",
     "details": [
-      { "type": "date", "text": "29 oct. — 17 déc. 2026 & 7 jan. — 28 jan. 2027 & (12 sem.)" },
+      { "type": "date", "text": "29 oct. — 17 déc. 2026 & 7 jan. — 28 jan. 2027 (12 sem.)" },
       { "type": "time", "text": "Jeudi 19h45 – 22h30 (33h)" },
       { "type": "location", "text": "Centre de loisirs St-Denis" },
       { "type": "capacity", "text": "16 athlètes max (tryout requis)" }
