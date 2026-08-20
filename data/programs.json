@@ -13,21 +13,21 @@
     "tag": "Session en cours",
     "tagClass": "current"
   },
-  {
-    "badge": "Junior",
-    "badgeClass": "juniors",
-    "price": "230$",
+    {
+    "badge": "Adulte Intermédiaire",
+    "badgeClass": "adults",
+    "price": "300$",
     "currency": "CA",
-    "title": "Entraînement Junior : Tous Niveaux — Dimanche A2026",
+    "title": "Entraînement Adulte : Intermédiaire — Dimanche A2026",
     "details": [
       { "type": "date", "text": "13 sept. — 6 déc. 2026 (12 sem.) Excluant 29 nov." },
       { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
       { "type": "location", "text": "Collège de Maisonneuve" },
-      { "type": "capacity", "text": "12 athlètes max (17 ans et moins)" }
+      { "type": "capacity", "text": "24 athlètes max" }
     ],
     "tag": "Session en cours",
     "tagClass": "current"
-  },
+  }, 
   {
     "badge": "Adulte Débutant",
     "badgeClass": "adults",
@@ -44,18 +44,20 @@
     "tagClass": "current"
   },
   {
-    "badge": "Adulte",
-    "badgeClass": "adults",
-    "price": "300$",
+    "badge": "Junior",
+    "badgeClass": "juniors",
+    "price": "230$",
     "currency": "CA",
-    "title": "Entraînement Adulte : Intermédiare — Dimanche A2026",
+    "title": "Entraînement Junior : Tous Niveaux — Dimanche A2026",
     "details": [
       { "type": "date", "text": "13 sept. — 6 déc. 2026 (12 sem.) Excluant 29 nov." },
       { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
       { "type": "location", "text": "Collège de Maisonneuve" },
-      { "type": "capacity", "text": "24 athlètes max" }
+      { "type": "capacity", "text": "12 athlètes max (17 ans et moins)" }
     ],
     "tag": "Session en cours",
     "tagClass": "current"
   }
+
+
 ]
