@@ -1,4 +1,53 @@
-[   {
+[  
+  {
+    "badge": "Adulte Intermédiaire",
+    "badgeClass": "adults",
+    "price": "450$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Intermédiaire — Dimanche H2027",
+    "details": [
+      { "type": "date", "text": "10 jan. — 16 mai 2027 (18 sem.) Excluant 14 mars et 4 avril." },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "12 athlètes max" }
+    ],
+    "tag": "Session future",
+    "tagClass": "current"
+  }, 
+  {
+    "badge": "Adulte Débutant",
+    "badgeClass": "adults",
+    "price": "450$",
+    "currency": "CA",
+    "title": "Entraînement Adulte : Débutant — Dimanche H2027",
+    "details": [
+      { "type": "date", "text": "10 jan. — 16 mai 2027 (18 sem.) Excluant 14 mars et 4 avril." },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "12 athlètes max" }
+    ],
+    "tag": "Session future",
+    "tagClass": "current"
+  },
+  {
+    "badge": "Junior",
+    "badgeClass": "juniors",
+    "price": "360$",
+    "currency": "CA",
+    "title": "Entraînement Junior : Tous Niveaux — Dimanche H2027",
+    "details": [
+      { "type": "date", "text": "10 jan. — 16 mai 2027 (18 sem.) Excluant 14 mars et 4 avril." },
+      { "type": "time", "text": "Dimanche 10h30 – 13h30 (36h)" },
+      { "type": "location", "text": "Collège de Maisonneuve" },
+      { "type": "capacity", "text": "12 athlètes max (17 ans et moins)" }
+    ],
+    "tag": "Session future",
+    "tagClass": "current"
+  }
+  
+
+  
+  {
     "badge": "Adulte Avancé",
     "badgeClass": "advanced",
     "price": "320$",
@@ -11,7 +60,7 @@
       { "type": "capacity", "text": "16 athlètes max (tryout requis)" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "past"
   },
     {
     "badge": "Adulte Intermédiaire",
@@ -26,7 +75,7 @@
       { "type": "capacity", "text": "12 athlètes max" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "past"
   }, 
   {
     "badge": "Adulte Débutant",
@@ -41,7 +90,7 @@
       { "type": "capacity", "text": "12 athlètes max" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "past"
   },
   {
     "badge": "Junior",
@@ -56,7 +105,7 @@
       { "type": "capacity", "text": "12 athlètes max (17 ans et moins)" }
     ],
     "tag": "Session en cours",
-    "tagClass": "current"
+    "tagClass": "past"
   }
 
 
